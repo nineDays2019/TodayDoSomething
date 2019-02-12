@@ -18,9 +18,21 @@
 
     <block wx:else>
 
-        <view class="container">
-            <text class="text-center">测试：{{userInfo.nickName}}</text>
+        <view class="header-item">
+            <input confirm-type="done" placeholder="做点什么吧" bindconfirm="addThing" value="{{value}}"/>
         </view>
+
+        <block wx:for="{{things}}" wx:key="id">
+            <view class="item">
+                <checkbox value="{{item}}" checked="{{item.isComplete}}" disabled="{{item.isComplete}}" bindtap="complete" id="{{index}}">
+                    <text wx:if="{{!item.isComplete}}" >{{item.content}}</text>
+                    <text wx:else class="complete-text">{{item.content}}</text>
+                </checkbox>
+            </view>
+        </block>
+
     </block>
 
 </view>
+<!--<image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>-->
+<!--<text class="userinfo-nickname">{{userInfo.nickName}}</text>-->

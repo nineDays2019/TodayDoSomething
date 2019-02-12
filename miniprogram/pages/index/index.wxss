@@ -18,10 +18,42 @@ button {
     justify-content: center;
 }
 
-.max-width{
+.max-width {
     width: 100%;
 }
 
-.text-center{
+.text-center {
     text-align: center;
+}
+
+.item {
+    width: 100%;
+    padding: 20px 10px;
+    border-bottom-width: thin;
+    border-bottom-color: antiquewhite;
+    border-bottom-style: solid;
+    word-break: break-all;
+}
+
+.complete-text {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.header-item {
+    height: 30px;
+    width: 100%;
+    padding: 20px 10px;
+    border-bottom-width: thin;
+    border-bottom-color: wheat;
+    border-bottom-style: solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
 }
